@@ -2,102 +2,113 @@
 <html>
 <head>
 <style>
-	body {
-  background-color: lightgrey;
-}
+body { background-color: oldlace; }
 
 h1 {
   color: darkred;
   text-align: center;
 }
 	
-	h2 {
-  color: red;
-}
+h2 { color: red; }
 
-	h3 {
+h3 {
   color: green;
-		text-transform: uppercase;
+	text-transform: uppercase;
 }
 	
-	h4 {
-		font-weight: bold;
-	}
-	
-		p {
+h4 { font-weight: bold; }
+
+p {
   color: black;
   white-space: pre-line;
-			font-family: courier;
-			font-size: 15px;
+	font-family: courier;
+	font-size: 15px;
 }
 	
-	h5 {
-		font-family: times new roman;
-		font-style: italic;
-	}
+h5 {
+	font-family: times new roman;
+	font-style: italic;
+}
 	
 .prologue {
-		font-family: times new roman;
-		font-style: italic;
-		white-space:pre;
-		margin: auto;
+	font-family: times new roman;
+	font-style: italic;
+	white-space:pre;
+	margin: auto;
   width: 50%;
   border: 3px solid green;
   padding: 10px;
-		text-align: center;
-		}
+	text-align: center;
+}
 		
-	.sampson {
-		 color: blue;
-	}
+.sampson { color: blue; }
 	
-	.gregory {
-		color: red;
-	}
+.gregory { color: red; }
 	
-	.abraham {
-		color: green;
-	}
-	
-	.benvolio {
-		color: purple;
-	}
-	
-	.tybalt {
-		color: orange;
-	}
-	
-	.citizen {
-		color: pink;
-	}
-	
-	.capulet {
-		color: turquoise;
-	}
-	
-	.lady_capulet {
-		color: brown;
-	}
-	
-	.montague {
-		color: darkgray;
-	}
-	
-	.lady_montague {
-		color: gold;
-	}
-	
-	.prince {
-		color: lime;
-	}
-	
+.abraham { color: green; }
+
+.benvolio { color: purple; }
+
+.tybalt { color: orange; }
+
+.citizen { color: pink;	}
+
+.capulet { color: turquoise; }
+
+.lady_capulet { color: brown;	}
+
+.montague { color: darkgray; }
+
+.lady_montague { color: gold;	}
+
+.prince { color: lime; }
+
+body {
+  margin: 0; /* remove default body margin */
+  padding-top: 60px; /* prevent content from hiding under nav */
+}
+  
+html { scroll-padding-top: 70px; /* same as nav height */ }
+
+nav {
+  position: fixed;    /* stick to the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f0f0f0;
+  padding: 15px;
+  border-bottom: 2px solid #ccc;
+  z-index: 1000; /* make sure it stays above text */
+}
+  
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+  
+nav a:hover { color: darkred; }
+
+/* Highlight active nav item using :target */
+#prologue:target ~ nav a[href="#prologue"],
+#scene1:target ~ nav a[href="#scene1"] {
+  background: #333;
+  color: #fff;
+}
+
+section { margin-bottom: 50px; }
 
 	</style>
 </head>
 <body>
+  
 
 <h1>ROMEO AND JULIET</h1>
 <h2>ACT I</h2>
+  
+<!-- Prologue -->
+<section id="prologue">
 <h3>PROLOGUE</h3>
 <h4 class="prologue">Two households, both alike in dignity,
 In fair Verona, where we lay our scene,
@@ -113,142 +124,146 @@ Which, but their children's end, nought could remove,
 Is now the two hours' traffic of our stage;
 The which if you with patient ears attend,
 What here shall miss, our toil shall strive to mend.</h4>
-	<h3>SCENE I. Verona. A public place.</h3>
-	<h5>Enter SAMPSON and GREGORY, of the house of Capulet, armed with swords and bucklers</h5>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>Gregory, o' my word, we'll not carry coals.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>No, for then we should be colliers.</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>I mean, an we be in choler, we'll draw.</p>
+</section>
+  
+<!-- Scene 1 -->
+<section id="scene1">
+<h3>SCENE I. Verona. A public place.</h3>
+<h5>Enter SAMPSON and GREGORY, of the house of Capulet, armed with swords and bucklers</h5>
+<h4 class="sampson">SAMPSON</h4>
+<p>Gregory, o' my word, we'll not carry coals.</p>
 <h4 class="gregory">GREGORY</h4>
-	<p>Ay, while you live, draw your neck out o' the collar.</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>I strike quickly, being moved.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>But thou art not quickly moved to strike.</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>A dog of the house of Montague moves me.</p>
-	<h4 class="gregory">GREGORY</h4>
+<p>No, for then we should be colliers.</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>I mean, an we be in choler, we'll draw.</p>
+<h4 class="gregory">GREGORY</h4>
+<p>Ay, while you live, draw your neck out o' the collar.</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>I strike quickly, being moved.</p>
+<h4 class="gregory">GREGORY</h4>
+<p>But thou art not quickly moved to strike.</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>A dog of the house of Montague moves me.</p>
+<h4 class="gregory">GREGORY</h4>
 <p>To move is to stir; and to be valiant is to stand:
 	therefore, if thou art moved, thou runn'st away.</p>
-	<h4 class="sampson">SAMPSON</h4>
+<h4 class="sampson">SAMPSON</h4>
 <p>A dog of that house shall move me to stand: I will
 	take the wall of any man or maid of Montague's.</p>
-	<h4 class="gregory">GREGORY</h4>
+<h4 class="gregory">GREGORY</h4>
 <p>That shows thee a weak slave; for the weakest goes
 	to the wall.</p>
-	<h4 class="sampson">SAMPSON</h4>
+<h4 class="sampson">SAMPSON</h4>
 <p>True; and therefore women, being the weaker vessels,
 are ever thrust to the wall: therefore I will push
 Montague's men from the wall, and thrust his maids
 	to the wall.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>The quarrel is between our masters and us their men.</p>
-	<h4 class="sampson">SAMPSON</h4>
+<h4 class="gregory">GREGORY</h4>
+<p>The quarrel is between our masters and us their men.</p>
+<h4 class="sampson">SAMPSON</h4>
 <p>'Tis all one, I will show myself a tyrant: when I
 have fought with the men, I will be cruel with the
 	maids, and cut off their heads.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<P>The heads of the maids?</p>
-	<h4 class="sampson">SAMPSON</h4>
+<h4 class="gregory">GREGORY</h4>
+<p>The heads of the maids?</p>
+<h4 class="sampson">SAMPSON</h4>
 <p>Ay, the heads of the maids, or their maidenheads;
 	take it in what sense thou wilt.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>They must take it in sense that feel it.</p>
-	<h4 class="sampson">SAMPSON</h4>
+<h4 class="gregory">GREGORY</h4>
+<p>They must take it in sense that feel it.</p>
+<h4 class="sampson">SAMPSON</h4>
 <p>Me they shall feel while I am able to stand: and
 	'tis known I am a pretty piece of flesh.</p>
-	<h4 class="gregory">GREGORY</h4>
+<h4 class="gregory">GREGORY</h4>
 <p>'Tis well thou art not fish; if thou hadst, thou
 hadst been poor John. Draw thy tool! here comes
 	two of the house of the Montagues.</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>My naked weapon is out: quarrel, I will back thee.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>How! turn thy back and run?</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>Fear me not.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>No, marry; I fear thee!</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>Let us take the law of our sides; let them begin.</p>
-	<h4 class="gregory">GREGORY</h4>
+<h4 class="sampson">SAMPSON</h4>
+<p>My naked weapon is out: quarrel, I will back thee.</p>
+<h4 class="gregory">GREGORY</h4>
+<p>How! turn thy back and run?</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>Fear me not.</p>
+<h4 class="gregory">GREGORY</h4>
+<p>No, marry; I fear thee!</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>Let us take the law of our sides; let them begin.</p>
+<h4 class="gregory">GREGORY</h4>
 <p>I will frown as I pass by, and let them take it as
 	they list.</p>
-	<h4 class="sampson">SAMPSON</h4>
+<h4 class="sampson">SAMPSON</h4>
 <p>Nay, as they dare. I will bite my thumb at them;
 	which is a disgrace to them, if they bear it.</p>
-	<h5>Enter ABRAHAM and BALTHASAR</h5>
-	<h4 class="abraham">ABRAHAM</h4>
-	<p>Do you bite your thumb at us, sir?</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>I do bite my thumb, sir.</p>
-	<h4 class="abraham">ABRAHAM</h4>
-	<p>Do you bite your thumb at us, sir?</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<h5>[Aside to GREGORY]</h5><p> Is the law of our side, if I say
+<h5>Enter ABRAHAM and BALTHASAR</h5>
+<h4 class="abraham">ABRAHAM</h4>
+<p>Do you bite your thumb at us, sir?</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>I do bite my thumb, sir.</p>
+<h4 class="abraham">ABRAHAM</h4>
+<p>Do you bite your thumb at us, sir?</p>
+<h4 class="sampson">SAMPSON</h4>
+<h5>[Aside to GREGORY]</h5><p> Is the law of our side, if I say
 	ay?</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>No.</p>
-	<h4 class="sampson">SAMPSON</h4>
+<h4 class="gregory">GREGORY</h4>
+<p>No.</p>
+<h4 class="sampson">SAMPSON</h4>
 <p>No, sir, I do not bite my thumb at you, sir, but I
 	bite my thumb, sir.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>Do you quarrel, sir?</p>
-	<h4 class="abraham">ABRAHAM</h4>
-	<p>Quarrel sir! no, sir.</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>If you do, sir, I am for you: I serve as good a man as you.</p>
-	<h4 class="abraham">ABRAHAM</h4>
-	<p>No better.</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>Well, sir.</p>
-	<h4 class="gregory">GREGORY</h4>
-	<p>Say 'better:' here comes one of my master's kinsmen.</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>Yes, better, sir.</p>
-	<h4 class="abraham">ABRAHAM</h4>
-	<p>You lie.</p>
-	<h4 class="sampson">SAMPSON</h4>
-	<p>Draw, if you be men. Gregory, remember thy swashing blow.</p>
-	<h5>They fight</h5>
-	<h5>Enter BENVOLIO</h5>
-	<h4 class="benvolio">BENVOLIO</h4>
+<h4 class="gregory">GREGORY</h4>
+<p>Do you quarrel, sir?</p>
+<h4 class="abraham">ABRAHAM</h4>
+<p>Quarrel sir! no, sir.</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>If you do, sir, I am for you: I serve as good a man as you.</p>
+<h4 class="abraham">ABRAHAM</h4>
+<p>No better.</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>Well, sir.</p>
+<h4 class="gregory">GREGORY</h4>
+<p>Say 'better:' here comes one of my master's kinsmen.</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>Yes, better, sir.</p>
+<h4 class="abraham">ABRAHAM</h4>
+<p>You lie.</p>
+<h4 class="sampson">SAMPSON</h4>
+<p>Draw, if you be men. Gregory, remember thy swashing blow.</p>
+<h5>They fight</h5>
+<h5>Enter BENVOLIO</h5>
+<h4 class="benvolio">BENVOLIO</h4>
 <p>Part, fools!
 Put up your swords; you know not what you do.
 	Beats down their swords</p>
-	<h5>Enter TYBALT</h5>
-	<h4 class="tybalt">TYBALT</h4>
+<h5>Enter TYBALT</h5>
+<h4 class="tybalt">TYBALT</h4>
 <p>What, art thou drawn among these heartless hinds?
 	Turn thee, Benvolio, look upon thy death.</p>
-	<h4 class="benvolio">BENVOLIO</h4>
+<h4 class="benvolio">BENVOLIO</h4>
 <p>I do but keep the peace: put up thy sword,
 	Or manage it to part these men with me.</p>
-	<h4 class="tybalt">TYBALT</h4>
+<h4 class="tybalt">TYBALT</h4>
 <p>What, drawn, and talk of peace! I hate the word,
 As I hate hell, all Montagues, and thee:
 	Have at thee, coward!</p>
-	<h5>They fight</h5>
-	<h5>Enter, several of both houses, who join the fray; then enter Citizens, with clubs</h5>
-	<h4 class="citizen">FIRST CITIZEN</h4>
+<h5>They fight</h5>
+<h5>Enter, several of both houses, who join the fray; then enter Citizens, with clubs</h5>
+<h4 class="citizen">FIRST CITIZEN</h4>
 <p>Clubs, bills, and partisans! strike! beat them down!
 	Down with the Capulets! down with the Montagues!</p>
-	<h5>Enter CAPULET in his gown, and LADY CAPULET</h5>
-	<h4 class="capulet">CAPULET</h4>
-	<p>What noise is this? Give me my long sword, ho!</p>
-	<h4 class="lady_capulet">LADY CAPULET</h4>
-	<p>A crutch, a crutch! why call you for a sword?</p>
-	<h4 class="capulet">CAPULET</h4>
+<h5>Enter CAPULET in his gown, and LADY CAPULET</h5>
+<h4 class="capulet">CAPULET</h4>
+<p>What noise is this? Give me my long sword, ho!</p>
+<h4 class="lady_capulet">LADY CAPULET</h4>
+<p>A crutch, a crutch! why call you for a sword?</p>
+<h4 class="capulet">CAPULET</h4>
 <p>My sword, I say! Old Montague is come,
 	And flourishes his blade in spite of me.</p>
-	<h5>Enter MONTAGUE and LADY MONTAGUE</h5>
-	<h4 class="montague">MONTAGUE</h4>
-	<p>Thou villain Capulet,--Hold me not, let me go.</p>
-	<h4 class="lady_montague">LADY MONTAGUE</h4>
-	<p>Thou shalt not stir a foot to seek a foe.</p>
-	<h5>Enter PRINCE, with Attendants</h5>
-	<h4 class="prince">PRINCE</h4>
+<h5>Enter MONTAGUE and LADY MONTAGUE</h5>
+<h4 class="montague">MONTAGUE</h4>
+<p>Thou villain Capulet,--Hold me not, let me go.</p>
+<h4 class="lady_montague">LADY MONTAGUE</h4>
+<p>Thou shalt not stir a foot to seek a foe.</p>
+<h5>Enter PRINCE, with Attendants</h5>
+<h4 class="prince">PRINCE</h4>
 <p>Rebellious subjects, enemies to peace,
 Profaners of this neighbour-stained steel,--
 Will they not hear? What, ho! you men, you beasts,
@@ -272,11 +287,11 @@ And, Montague, come you this afternoon,
 To know our further pleasure in this case,
 To old Free-town, our common judgment-place.
 	Once more, on pain of death, all men depart.</p>
-	<h5>Exeunt all but MONTAGUE, LADY MONTAGUE, and BENVOLIO</h5>
-	<h4 class="montague">MONTAGUE</h4>
+<h5>Exeunt all but MONTAGUE, LADY MONTAGUE, and BENVOLIO</h5>
+<h4 class="montague">MONTAGUE</h4>
 <p>Who set this ancient quarrel new abroach?
 	Speak, nephew, were you by when it began?</p>
-	<h4 class="benvolio">BENVOLIO</h4>
+<h4 class="benvolio">BENVOLIO</h4>
 <p>Here were the servants of your adversary,
 And yours, close fighting ere I did approach:
 I drew to part them: in the instant came
@@ -287,12 +302,17 @@ Who nothing hurt withal hiss'd him in scorn:
 While we were interchanging thrusts and blows,
 Came more and more and fought on part and part,
 	Till the prince came, who parted either part.</p>
-	<h4 class="lady_montague">LADY MONTAGUE</h4>
+<h4 class="lady_montague">LADY MONTAGUE</h4>
 <p>O, where is Romeo? saw you him to-day?
 	Right glad I am he was not at this fray.</p>
+</section>
 
-
+<!-- Navigation -->
+<nav>
+<a href="#prologue">Prologue</a>
+<a href="#scene1">Scene 1</a>
+</nav>
   
-  </body>
-  </html>
-  >
+ </body>
+</html>
+ 
